@@ -38,7 +38,7 @@ public class DatabaseConnection {
         return instance;
     }
 
-    // using synchronized keyword
+    // using synchronized modifier
     public synchronized static DatabaseConnection getInstance_2(){
         if(instance == null){
             // the below line is the critical section

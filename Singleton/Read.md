@@ -1,11 +1,11 @@
-## Steps to make a class Singleton
+## Steps to make a class Singleton (Version 1)
 
-    1. Make the constructor private
-    2. Create a static method to return the DatabaseConnection instance
-    3. Create a static variable of type DatabaseConnection & initialize with null
-    4. Have checks in the getInstance() method,
-        - If the object is created -> return
-        - else -> create new object & return
+1. Make the constructor private 
+2. Create a static method to return the DatabaseConnection instance
+3. Create a static variable of type DatabaseConnection & initialize with null 
+4. Have checks in the getInstance() method, 
+   1. If the object is created -> return 
+   2. else -> create new object & return
 
 ## Concurrency Issues
 
@@ -49,5 +49,30 @@ marking it as synchronized will give access to only thread at any given point in
 3. Even though the Singleton object is created & set, still multiple threads can't access the getInstance() method 
 due to locking
 
+- In the version 3 changes, the actual critical section which can create concurrency issue is the below line
+
+![img_1.png](img_1.png)
+
+### Very important observation
+
+1. In the above code, even though the critical section is just one line, but we did the locking above the if condition.
+2. The reason is, if the instance is null & 2 different threads execute the if condition at the same time & get inside 
+the if block and
+   1. One of the thread will acquire the lock & enter the critical section & the other thread will wait for the lock to 
+   be freed (still the other thread is inside the if block)
+   2. Thread 1 will create the DatabaseConnection object & assign it to the instance variable & release the lock.
+   3. Now Thread 2 will acquire the lock & since its already inside the if block, so it will again create another new
+   instance of DatabaseConnection & overwrite the instance variable.
+   4. So, here if we lock the critical section alone, still multiple objects can be created for the Singleton
+3. The above issue can be resolved using "Double Check Locking" technique.
 
 
+### Double check locking (Version 4)
+
+1. If 2 different threads execute the if condition & enter the if block of `if(instance == null) { }` at the same time,
+then one thread will acquire the lock & create the DatabaseConnection object & assign it to instance variable.
+2. Then the 2nd thread acquires the lock & it will enter the critical section, so here instead of creating new 
+DatabaseConnection object directly & assign it to instance variable, we will have one more if condition of 
+`if(instance == null)` to check if any other prior threads which acquired the lock had created the object.
+3. This is called Double check locking. Using this approach, we do the locking only if the object is not initialized at
+the first time, once its initialized we don't block multiple threads to execute the getInstance() method at the same time
