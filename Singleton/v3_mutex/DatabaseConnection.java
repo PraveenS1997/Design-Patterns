@@ -27,9 +27,8 @@ public class DatabaseConnection {
         return instance;
     }
 
-    /*
-    using synchronized block & passing the class to lock
-    public static DatabaseConnection getInstance(){
+    // using synchronized block & passing the class to lock
+    public static DatabaseConnection getInstance_1(){
         synchronized (DatabaseConnection.class){
             if(instance == null){
                 // the below line is the critical section
@@ -39,13 +38,12 @@ public class DatabaseConnection {
         return instance;
     }
 
-    using synchronized keyword
-    public synchronized static DatabaseConnection getInstance(){
+    // using synchronized keyword
+    public synchronized static DatabaseConnection getInstance_2(){
         if(instance == null){
             // the below line is the critical section
             instance = new DatabaseConnection();
         }
         return instance;
     }
-    */
 }
