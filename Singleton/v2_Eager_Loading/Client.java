@@ -1,4 +1,4 @@
-package Singleton.v1;
+package Singleton.v2_Eager_Loading;
 
 public class Client {
     public static void main(String[] args) {
