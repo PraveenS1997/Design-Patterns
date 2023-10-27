@@ -13,8 +13,8 @@
 method at the same time `if(instance == null) { instance = new DatabaseConnection(); }`
 2. Since the instance is null, both the threads will get pass the if condition & both will 
 create 2 different DatabaseConnection object, which violates the Singleton pattern
-3. If thread 1 created the instance, it will assign the object to instance variable, then the thread 2 will
-create another instance & overwrite the instance variable. One of the DatabaseConnection object will be garbage collected
+3. If thread 1 created the instance, it will assign the object to instance variable, then the thread 2 will create 
+another instance & overwrite the instance variable. One of the DatabaseConnection object will be garbage collected
 
 ![img.png](v1/img.png)
 
@@ -25,14 +25,29 @@ create another instance & overwrite the instance variable. One of the DatabaseCo
 1. We can create the object of DatabaseConnection at the time of static variable initialization
 2. So the actual object will be created during the class load or when the application starts
 
-### Cons of Eager loading:
+### Cons of Eager loading
 
 1. The issues with creating the object at the compile time slow down the application start time, 
 if we follow this approach for all singleton objects present in the application
-2. If any singleton object requires certain arguments to pass (any configuration details) to create the object, we can't pass
-those parameters at the class load or application startup time (as the application is not completely started)
-3. Due to lazy lading all the singleton objects are created & available even though it was not used by any code unit, which will
-consume lots of unwanted memory unnecessarily.
+2. If any singleton object requires certain arguments to be passed (any configuration details) to create the object,
+we can't pass those parameters at the class load/application startup time (as the application is not completely started)
+and the configuration details are not available, for example we want to pass the environment parameter (prod, dev) &
+based on that, the log level will be decided.
+3. Due to lazy lading all the singleton objects are created & available even though it was not used by any code unit,
+which will consume lots of unwanted memory unnecessarily.
+
+### Lock the getInstance() method: (Version 3)
+
+1. We can lock the getInstance() method using the mutex or mark the method synchronized, so that only one thread can 
+access the method at any given time.
+
+### Cons of locking or marking the method synchronized
+
+1. In case of Singleton objects, we will face the concurrency only for the first time if the object is not initialized.
+2. Once the Singleton object is initialized, there won't be any concurrency issues, but by locking the entire method or 
+marking it as synchronized will give access to only thread at any given point in time.
+3. Even though the Singleton object is created & set, still multiple threads can't access the getInstance() method 
+due to locking
 
 
 
