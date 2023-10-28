@@ -27,12 +27,6 @@
 
 ## Telescopic Constructor:
 
-## Student Builder:
-
-* Create another class called StudentBuilder with all the attributes of the Student class
-* Version 1 -
-* Version 1 resolves the constructor issues & also the Student object will be created only after all the validations are done on the Student attributes
-
 `public Student(String name){
     this.name = name;
 }`
