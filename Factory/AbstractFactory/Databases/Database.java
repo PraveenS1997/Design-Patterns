@@ -1,7 +1,7 @@
 package Factory.AbstractFactory.Databases;
 
 import Factory.AbstractFactory.DatabaseFactories.DatabaseFactory;
-import Factory.AbstractFactory.PracticalFactory.DatabaseFactoryFactory;
+import Factory.AbstractFactory.PracticalFactory.DatabasePracticalFactory;
 import Factory.AbstractFactory.PracticalFactory.DatabaseType;
 
 public abstract class Database {
@@ -13,7 +13,5 @@ public abstract class Database {
         // connect to database
     }
 
-    public DatabaseFactory getDatabaseFactory(DatabaseType databaseType){
-        return DatabaseFactoryFactory.getDatabaseFactoryByType(databaseType);
-    }
+    public abstract DatabaseFactory getDatabaseFactory();
 }
