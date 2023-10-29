@@ -5,11 +5,6 @@ class IntelligentStudent extends Student{
 
     public IntelligentStudent(){ }
 
-    public IntelligentStudent(String name, int age, String batch, int iq){
-        super(name, age, batch);
-        this.iq = iq;
-    }
-
     public IntelligentStudent(IntelligentStudent intelligentStudent){
         super(intelligentStudent);
         setIq(intelligentStudent.iq);
@@ -23,7 +18,6 @@ class IntelligentStudent extends Student{
         this.iq = iq;
     }
 
-    @Override
     public IntelligentStudent copy(){
         return new IntelligentStudent(this);
     }

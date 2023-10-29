@@ -1,23 +1,21 @@
 package PrototypeAndRegistry.Prototype;
 
-public class Student {
+public class Student implements Prototype<Student>{
     private int age;
     private String name;
+    private double psp;
     private String batch;
+    private double averageBatchPsp;
 
     public Student(){ }
-
-    public Student(String name, int age, String batch){
-        this.name = name;
-        this.age = age;
-        this.batch = batch;
-    }
 
     // copy constructor
     public Student(Student student){
         this.name = student.name;
         this.age = student.age;
+        this.psp = student.psp;
         this.batch = student.batch;
+        this.averageBatchPsp = student.averageBatchPsp;
     }
 
     public Student copy(){
@@ -40,11 +38,27 @@ public class Student {
         this.name = name;
     }
 
+    public double getPsp() {
+        return psp;
+    }
+
+    public void setPsp(double psp) {
+        this.psp = psp;
+    }
+
     public String getBatch() {
         return batch;
     }
 
     public void setBatch(String batch) {
         this.batch = batch;
+    }
+
+    public double getAverageBatchPsp() {
+        return averageBatchPsp;
+    }
+
+    public void setAverageBatchPsp(double averageBatchPsp) {
+        this.averageBatchPsp = averageBatchPsp;
     }
 }
