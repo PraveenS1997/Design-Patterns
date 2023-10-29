@@ -1,4 +1,4 @@
-package AdapterAndFacade.Adapter;
+package AdapterAndFacade.AdapterDesign.Adapters;
 
 public interface BankApi {
     double checkBalance();

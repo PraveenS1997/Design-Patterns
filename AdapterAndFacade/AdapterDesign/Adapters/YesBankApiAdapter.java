@@ -1,9 +1,9 @@
-package AdapterAndFacade.Adapter;
+package AdapterAndFacade.AdapterDesign.Adapters;
 
-import AdapterAndFacade.ThirdPartyLibraries.IYesBankApi;
-import AdapterAndFacade.ThirdPartyLibraries.YesBankApi;
+import AdapterAndFacade.AdapterDesign.ThirdPartyLibraries.IYesBankApi;
+import AdapterAndFacade.AdapterDesign.ThirdPartyLibraries.YesBankApi;
 
-public class YesBankApiAdapter implements BankApi{
+public class YesBankApiAdapter implements BankApi {
     private final IYesBankApi yesBankService = new YesBankApi();
     @Override
     public double checkBalance() {
