@@ -45,7 +45,7 @@ public class Client {
         ramesh.setAge(28);
         ramesh.setPsp(87);
 
-        // prototype - example 2
+        // create a new intelligent student who belongs to July-2023 batch using the prototype object stored in registry
         Student intelligentPraveen = studentRegistry.getPrototype("July-2023").copy();
         intelligentPraveen.setName("Praveen");
         intelligentPraveen.setAge(30);
