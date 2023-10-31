@@ -1,4 +1,4 @@
-package PrototypeAndRegistry.Registry;
+package Prototype__Registry.Registry;
 
 public interface Registry<K, V> {
     V getPrototype(K key);

@@ -1,6 +1,6 @@
-package PrototypeAndRegistry.Registry;
+package Prototype__Registry.Registry;
 
-import PrototypeAndRegistry.Prototype.Student;
+import Prototype__Registry.Prototype.Student;
 
 import java.util.HashMap;
 

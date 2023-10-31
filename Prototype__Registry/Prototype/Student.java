@@ -1,4 +1,4 @@
-package PrototypeAndRegistry.Prototype;
+package Prototype__Registry.Prototype;
 
 public class Student implements Prototype<Student>{
     private int age;

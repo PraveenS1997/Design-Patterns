@@ -1,4 +1,4 @@
-package AdapterAndFacade.AdapterDesign.ThirdPartyLibraries;
+package Adapter__Facade.AdapterDesign.ThirdPartyLibraries;
 
 public class YesBankApi implements IYesBankApi{
     @Override

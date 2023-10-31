@@ -1,7 +1,7 @@
-package PrototypeAndRegistry.Prototype;
+package Prototype__Registry.Prototype;
 
-import PrototypeAndRegistry.Registry.Registry;
-import PrototypeAndRegistry.Registry.StudentRegistry;
+import Prototype__Registry.Registry.Registry;
+import Prototype__Registry.Registry.StudentRegistry;
 
 public class Client {
     private static final Registry<String, Student> studentRegistry = new StudentRegistry();
