@@ -15,9 +15,9 @@ public class RouteCalculatorFactory {
     // since we don't need to pass any arguments to Car, Bike, Walk
     // RouteCalculators when creating objects, so we can use
     // eager loading Singleton approach
-    private static RouteCalculator carRouteCalculator = new CarRouteCalculator();
-    private static RouteCalculator bikeRouteCalculator = new BikeRouteCalculator();
-    private static RouteCalculator walkRouteCalculator = new WalkRouteCalculator();
+    private static final RouteCalculator carRouteCalculator = new CarRouteCalculator();
+    private static final RouteCalculator bikeRouteCalculator = new BikeRouteCalculator();
+    private static final RouteCalculator walkRouteCalculator = new WalkRouteCalculator();
 
     public static RouteCalculator getRouteCalculatorByMode(TransportationMode mode){
         return switch (mode){

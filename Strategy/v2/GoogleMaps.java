@@ -11,15 +11,15 @@ public class GoogleMaps {
     public void findRoute(String source, String destination, TransportationMode mode){
         if(mode == TransportationMode.CAR){
             RouteCalculator carRouteCalculator = new CarRouteCalculator();
-            carRouteCalculator.getRoute(source, destination);
+            carRouteCalculator.findRoute(source, destination);
         }
         if(mode == TransportationMode.BIKE){
             RouteCalculator bikeRouteCalculator = new BikeRouteCalculator();
-            bikeRouteCalculator.getRoute(source, destination);
+            bikeRouteCalculator.findRoute(source, destination);
         }
         if(mode == TransportationMode.WALK){
             RouteCalculator walkRouteCalculator = new WalkRouteCalculator();
-            walkRouteCalculator.getRoute(source, destination);
+            walkRouteCalculator.findRoute(source, destination);
         }
     }
 }

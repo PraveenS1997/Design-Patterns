@@ -1,5 +1,5 @@
 package Strategy.RouteCalulators;
 
 public interface RouteCalculator {
-    void getRoute(String source, String destination);
+    void findRoute(String source, String destination);
 }
