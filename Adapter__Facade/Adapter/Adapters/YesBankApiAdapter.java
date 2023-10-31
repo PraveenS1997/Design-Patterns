@@ -1,7 +1,7 @@
-package Adapter__Facade.AdapterDesign.Adapters;
+package Adapter__Facade.Adapter.Adapters;
 
-import Adapter__Facade.AdapterDesign.ThirdPartyLibraries.IYesBankApi;
-import Adapter__Facade.AdapterDesign.ThirdPartyLibraries.YesBankApi;
+import Adapter__Facade.Adapter.ThirdPartyLibraries.IYesBankApi;
+import Adapter__Facade.Adapter.ThirdPartyLibraries.YesBankApi;
 
 public class YesBankApiAdapter implements BankApi {
     private final IYesBankApi yesBankService = new YesBankApi();

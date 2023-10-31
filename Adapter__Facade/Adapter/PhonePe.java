@@ -1,7 +1,7 @@
-package Adapter__Facade.AdapterDesign;
+package Adapter__Facade.Adapter;
 
-import Adapter__Facade.AdapterDesign.Adapters.BankApi;
-import Adapter__Facade.AdapterDesign.Adapters.YesBankApiAdapter;
+import Adapter__Facade.Adapter.Adapters.BankApi;
+import Adapter__Facade.Adapter.Adapters.YesBankApiAdapter;
 
 public class PhonePe {
     public static void main(String[] args) {

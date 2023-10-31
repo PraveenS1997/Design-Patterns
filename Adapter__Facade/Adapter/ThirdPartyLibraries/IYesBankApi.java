@@ -1,4 +1,4 @@
-package Adapter__Facade.AdapterDesign.ThirdPartyLibraries;
+package Adapter__Facade.Adapter.ThirdPartyLibraries;
 
 public interface IYesBankApi {
     double checkBalance();
