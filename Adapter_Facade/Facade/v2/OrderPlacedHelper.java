@@ -1,6 +1,6 @@
-package Adapter__Facade.Facade.v2;
+package Adapter_Facade.Facade.v2;
 
-import Adapter__Facade.Facade.Services.*;
+import Adapter_Facade.Facade.Services.*;
 
 public class OrderPlacedHelper {
     private InventoryService inventoryService;

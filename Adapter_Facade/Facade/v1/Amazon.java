@@ -1,6 +1,6 @@
-package Adapter__Facade.Facade.v1;
+package Adapter_Facade.Facade.v1;
 
-import Adapter__Facade.Facade.Services.*;
+import Adapter_Facade.Facade.Services.*;
 
 public class Amazon {
     private InventoryService inventoryService;

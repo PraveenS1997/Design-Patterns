@@ -1,4 +1,4 @@
-package Prototype__Registry.Prototype;
+package Prototype_Registry.Prototype;
 
 class IntelligentStudent extends Student{
     private int iq;

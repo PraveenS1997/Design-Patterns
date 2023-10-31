@@ -1,4 +1,4 @@
-package Adapter__Facade.Facade.Services;
+package Adapter_Facade.Facade.Services;
 
 public interface EmailService{
     void sendEmail();

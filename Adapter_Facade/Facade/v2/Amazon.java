@@ -1,4 +1,4 @@
-package Adapter__Facade.Facade.v2;
+package Adapter_Facade.Facade.v2;
 
 public class Amazon {
     private OrderPlacedHelper orderPlacedHelper;
