@@ -1,9 +1,9 @@
 package Strategy.v4;
 
-import Strategy.RouteCalulators.BikeRouteCalculator;
-import Strategy.RouteCalulators.CarRouteCalculator;
-import Strategy.RouteCalulators.RouteCalculator;
-import Strategy.RouteCalulators.WalkRouteCalculator;
+import Strategy.PathCalulators.BikePathCalculator;
+import Strategy.PathCalulators.CarPathCalculator;
+import Strategy.PathCalulators.PathCalculator;
+import Strategy.PathCalulators.WalkPathCalculator;
 import Strategy.TransportationMode;
 
 // practical factory implementation to get the correct
@@ -15,15 +15,15 @@ public class RouteCalculatorFactory {
     // since we don't need to pass any arguments to Car, Bike, Walk
     // RouteCalculators when creating objects, so we can use
     // eager loading Singleton approach
-    private static final RouteCalculator carRouteCalculator = new CarRouteCalculator();
-    private static final RouteCalculator bikeRouteCalculator = new BikeRouteCalculator();
-    private static final RouteCalculator walkRouteCalculator = new WalkRouteCalculator();
+    private static final PathCalculator CAR_PATH_CALCULATOR = new CarPathCalculator();
+    private static final PathCalculator BIKE_PATH_CALCULATOR = new BikePathCalculator();
+    private static final PathCalculator WALK_PATH_CALCULATOR = new WalkPathCalculator();
 
-    public static RouteCalculator getRouteCalculatorByMode(TransportationMode mode){
+    public static PathCalculator getRouteCalculatorByMode(TransportationMode mode){
         return switch (mode){
-            case CAR -> carRouteCalculator;
-            case BIKE -> bikeRouteCalculator;
-            case WALK -> walkRouteCalculator;
+            case CAR -> CAR_PATH_CALCULATOR;
+            case BIKE -> BIKE_PATH_CALCULATOR;
+            case WALK -> WALK_PATH_CALCULATOR;
         };
     }
 }
