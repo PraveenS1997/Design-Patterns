@@ -14,10 +14,6 @@ public class EventManager {
         this.subscribers = new HashMap<>();
     }
 
-    public Map<EventType, List<Subscriber>> getSubscribers() {
-        return subscribers;
-    }
-
     public void registerSubscriber(EventType eventType, Subscriber subscriber){
         if(!subscribers.containsKey(eventType)){
             subscribers.put(eventType, new ArrayList<>());

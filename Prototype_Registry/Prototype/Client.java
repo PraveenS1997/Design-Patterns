@@ -45,13 +45,15 @@ public class Client {
         ramesh.setAge(28);
         ramesh.setPsp(87);
 
-        // create a new intelligent student who belongs to July-2023 batch using the prototype object stored in registry
+        // create a new intelligent student who belongs to July-2023
+        // batch using the prototype object stored in registry
         Student intelligentPraveen = studentRegistry.getPrototype("July-2023").copy();
         intelligentPraveen.setName("Praveen");
         intelligentPraveen.setAge(30);
         intelligentPraveen.setPsp(98);
 
-        // create a new student who belongs to batch June-2023 using the prototype object stored in registry
+        // create a new student who belongs to batch June-2023 using
+        // the prototype object stored in registry
         Student vijay = studentRegistry.getPrototype("June-2023").copy();
         vijay.setName("Vijay");
         vijay.setAge(25);

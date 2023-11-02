@@ -5,7 +5,7 @@ public class Client {
         DatabaseConnection db1 = DatabaseConnection.getInstance();
         DatabaseConnection db2 = DatabaseConnection.getInstance();
 
-        System.out.println(db1 + " " + db2);
+        System.out.println(db1.hashCode() + " " + db2.hashCode());
         System.out.println("Are db1 & db2 instance are same: " + (db1 == db2));
     }
 }
