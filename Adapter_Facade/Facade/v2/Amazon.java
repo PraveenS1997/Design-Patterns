@@ -1,8 +1,8 @@
 package Adapter_Facade.Facade.v2;
 
 public class Amazon {
-    private OrderPlacedHelper orderPlacedHelper;
+    private OrderPlacedFacade orderPlacedFacade;
     public void orderPlaced(){
-        orderPlacedHelper.orderPlaced();
+        orderPlacedFacade.orderPlaced();
     }
 }

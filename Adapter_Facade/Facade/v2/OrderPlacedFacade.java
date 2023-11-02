@@ -2,7 +2,7 @@ package Adapter_Facade.Facade.v2;
 
 import Adapter_Facade.Facade.Services.*;
 
-public class OrderPlacedHelper {
+public class OrderPlacedFacade {
     private InventoryService inventoryService;
     private SellerService sellerService;
     private AppNotificationService appNotificationService;

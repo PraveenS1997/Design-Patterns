@@ -6,9 +6,9 @@ import Factory.AbstractFactory.Databases.MySqlDatabase;
 
 public class DatabasePracticalFactory {
     public static Database getDatabaseByType(DatabaseType databaseType){
-        if(databaseType == DatabaseType.SQL){
-            return new MySqlDatabase();
-        }
-        return new MongoDatabase();
+        return switch (databaseType){
+            case SQL -> new MySqlDatabase();
+            case NoSQL -> new MongoDatabase();
+        };
     }
 }
