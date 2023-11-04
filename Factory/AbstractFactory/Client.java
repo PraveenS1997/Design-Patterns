@@ -18,15 +18,17 @@ public class Client {
         // Sql example
         Database sqlDatabase = DatabasePracticalFactory.getDatabaseByType(DatabaseType.SQL);
         DatabaseFactory sqlDbFactory = sqlDatabase.getDatabaseFactory();
+        System.out.println(sqlDbFactory.getClass());
         Query sqlQuery = sqlDbFactory.createQuery();
         Transaction sqlTransaction = sqlDbFactory.createTransaction();
         Updater sqlUpdater = sqlDbFactory.createUpdater();
 
         // NoSql example
         Database mongoDatabase = DatabasePracticalFactory.getDatabaseByType(DatabaseType.NoSQL);
-        DatabaseFactory dbFactory = mongoDatabase.getDatabaseFactory();
-        Query noSqlQuery = dbFactory.createQuery();
-        Transaction noSqlTransaction = dbFactory.createTransaction();
-        Updater noSqlUpdater = dbFactory.createUpdater();
+        DatabaseFactory noSqlDbFactory = mongoDatabase.getDatabaseFactory();
+        System.out.println(noSqlDbFactory.getClass());
+        Query noSqlQuery = noSqlDbFactory.createQuery();
+        Transaction noSqlTransaction = noSqlDbFactory.createTransaction();
+        Updater noSqlUpdater = noSqlDbFactory.createUpdater();
     }
 }

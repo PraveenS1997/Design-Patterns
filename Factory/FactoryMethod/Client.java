@@ -11,10 +11,10 @@ public class Client {
     public static void main(String[] args) {
         Database mongoDb = new MongoDatabase();
         Query noSqlQuery = mongoDb.createQuery();
-        System.out.println(noSqlQuery instanceof NoSQlQuery);
+        System.out.println(noSqlQuery.getClass() == NoSQlQuery.class);
 
         Database sqlDb = new MySqlDatabase();
         Query sqlQuery = sqlDb.createQuery();
-        System.out.println(sqlQuery instanceof SQLQuery);
+        System.out.println(sqlQuery.getClass() == SQLQuery.class);
     }
 }
