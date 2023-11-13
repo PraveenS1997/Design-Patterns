@@ -1,4 +1,4 @@
-package SOLID.v2;
+package SOLID.v2_OCP;
 
 public class Crow extends Bird{
     public Crow(String name, int noOfWings) {

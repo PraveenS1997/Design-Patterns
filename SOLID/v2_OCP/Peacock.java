@@ -1,4 +1,4 @@
-package SOLID.v2;
+package SOLID.v2_OCP;
 
 public class Peacock extends Bird{
     public Peacock(String name, int noOfWings) {

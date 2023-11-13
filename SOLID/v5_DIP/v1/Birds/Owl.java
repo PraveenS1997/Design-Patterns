@@ -1,9 +1,11 @@
-package SOLID.v3.Birds;
+package SOLID.v5_DIP.v1.Birds;
 
-import SOLID.v3.Birds.Bird;
-import SOLID.v3.Flyable;
+import SOLID.v3_LSP.Flyable;
+import SOLID.v5_DIP.v1.CrowOwlFlyingBehavior;
 
 public class Owl extends Bird implements Flyable {
+    private CrowOwlFlyingBehavior flyingBehavior = new CrowOwlFlyingBehavior();
+
     public Owl(String name) {
         super(name);
     }
@@ -17,6 +19,6 @@ public class Owl extends Bird implements Flyable {
     @Override
     public void fly() {
         // Owl fly logic
-        System.out.println("Owl is flying");
+        this.flyingBehavior.fly();
     }
 }

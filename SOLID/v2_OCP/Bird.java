@@ -1,4 +1,4 @@
-package SOLID.v2;
+package SOLID.v2_OCP;
 
 public abstract class Bird {
     public String name;

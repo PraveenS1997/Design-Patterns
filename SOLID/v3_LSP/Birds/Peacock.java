@@ -1,7 +1,6 @@
-package SOLID.v3.Birds;
+package SOLID.v3_LSP.Birds;
 
-import SOLID.v3.Birds.Bird;
-import SOLID.v3.Flyable;
+import SOLID.v3_LSP.Flyable;
 
 public class Peacock extends Bird implements Flyable {
     public Peacock(String name) {

@@ -1,6 +1,4 @@
-package SOLID.v3.Birds;
-
-import SOLID.v3.Birds.Bird;
+package SOLID.v5_DIP.v2.Birds;
 
 public class Penguin extends Bird {
     public Penguin(String name) {

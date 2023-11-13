@@ -1,4 +1,4 @@
-package SOLID.v3.Birds;
+package SOLID.v5_DIP.v2.Birds;
 
 public abstract class Bird {
     public String name;

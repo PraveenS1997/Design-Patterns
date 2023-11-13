@@ -1,4 +1,4 @@
-package SOLID.v3;
+package SOLID.v3_LSP;
 
 public interface Flyable {
     void fly();

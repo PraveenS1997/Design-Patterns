@@ -1,4 +1,4 @@
-package SOLID.v1;
+package SOLID.v1_SRP;
 
 public class Bird {
     private String name;

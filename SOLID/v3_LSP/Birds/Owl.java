@@ -1,8 +1,10 @@
-package SOLID.v2;
+package SOLID.v3_LSP.Birds;
 
-public class Owl extends Bird{
-    public Owl(String name, int noOfWings) {
-        super(name, noOfWings);
+import SOLID.v3_LSP.Flyable;
+
+public class Owl extends Bird implements Flyable {
+    public Owl(String name) {
+        super(name);
     }
 
     @Override

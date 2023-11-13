@@ -1,9 +1,9 @@
-package SOLID.v3;
+package SOLID.v3_LSP;
 
-import SOLID.v3.Birds.Crow;
-import SOLID.v3.Birds.Owl;
-import SOLID.v3.Birds.Peacock;
-import SOLID.v3.Birds.Penguin;
+import SOLID.v3_LSP.Birds.Crow;
+import SOLID.v3_LSP.Birds.Owl;
+import SOLID.v3_LSP.Birds.Peacock;
+import SOLID.v3_LSP.Birds.Penguin;
 
 import java.util.ArrayList;
 import java.util.List;
