@@ -10,4 +10,10 @@ public class Peacock extends Bird{
         // peacock sound logic
         System.out.println("Peacock is making sound");
     }
+
+    @Override
+    public void fly() {
+        // peacock fly logic
+        System.out.println("Peacock is flying");
+    }
 }

@@ -10,4 +10,10 @@ public class Crow extends Bird{
         // Crow make sound logic
         System.out.println("Crow is making sound");
     }
+
+    @Override
+    public void fly() {
+        // Crow fly logic
+        System.out.println("Crow is flying");
+    }
 }

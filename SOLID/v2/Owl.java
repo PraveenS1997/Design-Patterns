@@ -10,4 +10,10 @@ public class Owl extends Bird{
         // Owl sound logic
         System.out.println("Owl is making sound");
     }
+
+    @Override
+    public void fly() {
+        // Owl fly logic
+        System.out.println("Owl is flying");
+    }
 }

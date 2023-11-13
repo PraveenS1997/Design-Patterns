@@ -13,4 +13,9 @@ public abstract class Bird {
         // default logic for all the birds make sound
         System.out.println("Bird is making sound");
     }
+
+    public void fly(){
+        // default logic for all the birds fly method
+        System.out.println("Bird is flying");
+    }
 }
