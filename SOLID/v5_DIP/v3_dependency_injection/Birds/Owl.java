@@ -1,14 +1,14 @@
-package SOLID.v5_DIP.v2.Birds;
+package SOLID.v5_DIP.v3_dependency_injection.Birds;
 
 import SOLID.v3_LSP.Flyable;
-import SOLID.v5_DIP.v2.FlyingBehavior.CrowOwlFlyingBehavior;
-import SOLID.v5_DIP.v2.FlyingBehavior.FlyingBehavior;
+import SOLID.v5_DIP.v3_dependency_injection.FlyingBehavior.FlyingBehavior;
 
 public class Owl extends Bird implements Flyable {
-    private final FlyingBehavior flyingBehavior = new CrowOwlFlyingBehavior();
+    private final FlyingBehavior flyingBehavior;
 
-    public Owl(String name) {
+    public Owl(String name, FlyingBehavior crowOwlFlyingBehavior) {
         super(name);
+        flyingBehavior = crowOwlFlyingBehavior;
     }
 
     @Override

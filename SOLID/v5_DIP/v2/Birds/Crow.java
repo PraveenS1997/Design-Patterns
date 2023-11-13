@@ -5,7 +5,7 @@ import SOLID.v5_DIP.v2.FlyingBehavior.CrowOwlFlyingBehavior;
 import SOLID.v5_DIP.v2.FlyingBehavior.FlyingBehavior;
 
 public class Crow extends Bird implements Flyable {
-    private FlyingBehavior flyingBehavior = new CrowOwlFlyingBehavior();
+    private final FlyingBehavior flyingBehavior = new CrowOwlFlyingBehavior();
     public Crow(String name) {
         super(name);
     }
