@@ -11,6 +11,7 @@ public class GoogleMaps {
             // to find the shortest route from
             // source --> destination for cars
             // ...
+            System.out.println("calculating the route for cars");
         }
         if(mode == TransportationMode.BIKE){
             // find the shortest path for bike
@@ -18,6 +19,7 @@ public class GoogleMaps {
             // to find the shortest route from
             // source --> destination for bikes
             // ...
+            System.out.println("calculating the route for bikes");
         }
         if(mode == TransportationMode.WALK){
             // find the shortest path for walking
@@ -25,6 +27,7 @@ public class GoogleMaps {
             // to find the shortest route from
             // source --> destination for walk
             // ...
+            System.out.println("calculating the route for walking");
         }
     }
 }

@@ -8,8 +8,8 @@ import Strategy.TransportationMode;
 
 // practical factory implementation to get the correct
 // RouteCalculator objects from given Transportation mode
-public class RouteCalculatorFactory {
-    public static PathCalculator getRouteCalculatorByMode(TransportationMode mode){
+public class PathCalculatorFactory {
+    public static PathCalculator getPathCalculatorByMode(TransportationMode mode){
         return switch (mode){
             case CAR -> new CarPathCalculator();
             case BIKE -> new BikePathCalculator();
