@@ -8,6 +8,7 @@ public class PhonePe {
         BankApi yesBankAdapter = new YesBankApiAdapter();
         yesBankAdapter.addBankAccount();
         System.out.println("Account Balance: " + yesBankAdapter.checkBalance());
-        yesBankAdapter.pay();
+        boolean isPaid = yesBankAdapter.pay();
+        System.out.println(isPaid);
     }
 }
