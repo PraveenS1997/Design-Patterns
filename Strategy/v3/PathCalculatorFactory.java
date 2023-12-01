@@ -7,7 +7,7 @@ import Strategy.PathCalulators.WalkPathCalculator;
 import Strategy.TransportationMode;
 
 // practical factory implementation to get the correct
-// RouteCalculator objects from given Transportation mode
+// pathCalculator object based on the given Transportation mode
 public class PathCalculatorFactory {
     public static PathCalculator getPathCalculatorByMode(TransportationMode mode){
         return switch (mode){
